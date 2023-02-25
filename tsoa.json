@@ -1,0 +1,21 @@
+{
+  "entryFile": "src/presentation/index.ts",
+  "noImplicitAdditionalProperties": "throw-on-extras",
+  "controllerPathGlobs": ["src/presentation/controllers/*.ts"],
+  "spec": {
+    "outputDirectory": "src/presentation",
+    "specVersion": 3,
+    "securityDefinitions": {
+      "jwt": {
+        "type": "apiKey",
+        "name": "Authorization",
+        "in": "header"
+      }
+    }
+  },
+  "routes": {
+    "routesDir": "src/presentation",
+    "authenticationModule": "src/presentation/middlewares/auth.ts",
+    "iocModule": "src/presentation/ioc.ts"
+  }
+}
