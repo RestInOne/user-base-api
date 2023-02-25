@@ -8,7 +8,7 @@ COPY package.json yarn.lock /app
 
 RUN yarn install --silent && yarn cache clean --force
 
-COPY .eslintrc.json .eslintignore tsconfig.json /app/
+COPY .eslintrc.json .eslintignore tsconfig.json tsoa.json /app/
 
 COPY src /app/src
 
