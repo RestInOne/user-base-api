@@ -1,0 +1,59 @@
+version: '3.9'
+
+services: 
+  api:
+    image: israelcosta09/payment-system-api:latest
+    environment:
+      DB_URL: mongodb+srv://outsider_root:AhvA1OSTHQye9B0N@main.bzcce.mongodb.net
+      DB_NAME: payment-system
+      MAIL_HOST: smtp.gmail.com
+      MAIL_PORT: 465
+      MAIL_USER: cmteisrael@gmail.com
+      MAIL_PASSWORD: ccmtjrhuktkjgsoz
+      PRIVATE_KEY: -|2
+        -----BEGIN OPENSSH PRIVATE KEY-----
+        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
+        cN/lbwGvsIlMD/6Ys9QT4V5LsFY=
+        -----END OPENSSH PRIVATE KEY-----
+    ports:
+      - 80:3000
+
+networks:
+  default:
+    driver: bridge
+    name: payment-system

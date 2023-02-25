@@ -1,5 +1,5 @@
 node_modules
 dist
-docker-compose.yaml
+./docker-compose.yaml
 src/presentation/routes.ts
 src/presentation/swagger.json
