@@ -73,15 +73,4 @@ jobs:
           script: |
             sudo docker compose -f /home/ubuntu/app/docker-compose.yaml pull
             sudo docker compose -f /home/ubuntu/app/docker-compose.yaml up -d
-      
-      - name: Deploy on dev server
-        uses: appleboy/ssh-action@master
-        with:
-          host: ${{ secrets.DEV_SERVER_HOST }}
-          username: ${{ secrets.SERVER_USERNAME }}
-          key: ${{ secrets.SERVER_KEY }}
-          port: ${{ secrets.SERVER_PORT }}
-          script: |
-            sudo docker compose -f /home/ubuntu/docker-compose.yaml pull
-            sudo docker compose -f /home/ubuntu/docker-compose.yaml up -d
         
