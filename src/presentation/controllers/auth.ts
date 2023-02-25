@@ -1,7 +1,7 @@
 import { Route } from '@tsoa/runtime'
 import { inject, injectable } from 'inversify'
-import { Tags, Body, Post, Query, Security,  } from 'tsoa'
-import { Controller } from 'tsoa'
+import { Tags, Body, Post, Query, Security, Controller } from 'tsoa'
+
 import { AuthServiceDTO, IAuthService } from '../../domain/services/auth'
 
 @Route('/auth')

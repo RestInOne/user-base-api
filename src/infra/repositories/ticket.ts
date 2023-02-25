@@ -15,10 +15,10 @@ export class TicketRepository implements ITicketRepository {
       userId: data.userId
     }
   }
-  
+
   async find (query: Partial<Ticket>): Promise<Ticket[]> {
     const ticketsData = await TicketMongoDBModel.find(query)
-    
+
     return ticketsData.map(this.toModel)
   }
 
@@ -34,13 +34,13 @@ export class TicketRepository implements ITicketRepository {
 
   async findByHash (hash: string): Promise<Ticket | null> {
     const ticketData = await TicketMongoDBModel.findOne({ hash })
-    
+
     return this.toModel(ticketData)
   }
 
   async save (ticket: Ticket): Promise<Ticket> {
     const ticketData = await TicketMongoDBModel.create(ticket)
-    
+
     return this.toModel(ticketData)
   }
 }

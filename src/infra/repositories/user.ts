@@ -19,13 +19,13 @@ export class UserRepository implements IUserRepository {
 
   async save (user: User): Promise<User> {
     const userData = await UserMongoDBModel.create(user)
-    
+
     return this.toModel(userData)
   }
 
   async findByEmail (email: string): Promise<User | null> {
     const userData = await UserMongoDBModel.findOne({ email })
-    
+
     if (!userData) return null
 
     return this.toModel(userData)

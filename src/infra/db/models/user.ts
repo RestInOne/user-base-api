@@ -21,7 +21,7 @@ const UserSchema = new Schema({
   password: {
     type: String,
     required: true
-  },
+  }
 })
 
 export const UserMongoDBModel = mongoose.model('User', UserSchema)
